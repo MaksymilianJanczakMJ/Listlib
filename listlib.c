@@ -91,7 +91,7 @@ int insert(
         first = 1;
         end = 0;
         for (i = 0; i < position; i++) {
-            if (next == *head && end == 0) {
+            if (next->next == *head && end == 0) {
                 end = 1;
                 if (first) {
                     first = 0;
