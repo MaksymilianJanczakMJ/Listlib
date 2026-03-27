@@ -213,10 +213,28 @@ int list_close(
 
 int list_pos(
     list **head,
-    int position
+    int position,
+    int *out
     ) {
     int i;
     list *current;
+
+    if (head == NULL || *head == NULL) {
+        return 1;
+    }
+
+    current = *head;
+    if (position >= 0) {
+        for (i = 0; i < position; i++) {
+            current = current->next;
+        }
+    } else {
+        for (i = 0; i > position; i--) {
+            current = current->prev;
+        }
+    }
+
+    *out = current->data;
 
     return 0;
 }

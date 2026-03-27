@@ -5,6 +5,7 @@
 
 int main() {
     list *head;
+    int n;
 
     list_add(&head, 0);
     list_add(&head, 1);
@@ -21,13 +22,8 @@ int main() {
 
     list_print(head);
 
-    list_remove(&head, 5);
-
-    list_close(&head);
-    list_add(&head, 5);
-    list_add(&head, 5);
-
-    list_print(head);
+    list_pos(&head, -58, &n);
+    printf("%d\n", n);
 
     return 0;
 }

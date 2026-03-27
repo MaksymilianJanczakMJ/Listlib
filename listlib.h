@@ -48,7 +48,8 @@ int list_close(
 
 int list_pos(
     list **head,
-    int position
+    int position,
+    int *out
     );
 
 
