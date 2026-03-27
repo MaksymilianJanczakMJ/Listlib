@@ -217,6 +217,7 @@ int list_print(
     list *node;
 
     if (head == NULL) {
+        printf("[]\n");
         return 1;
     }
 

@@ -23,6 +23,10 @@ int main() {
 
     list_remove(&head, 5);
 
+    list_close(&head);
+    list_add(&head, 5);
+    list_add(&head, 5);
+
     list_print(head);
 
     return 0;
