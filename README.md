@@ -22,6 +22,19 @@ Lists consists of connected structures, where every structure aside of writen da
 ## Functions
 
 ### list_add()
-Adds elements to empty list or to list that already have elements, by connecting a new element to tail.
+Adds an element to empty list or to list that already have elements, by connecting a new element to the tail.
 
 ### list_pop()
+Subtracts an element from list, by removing the tail.
+
+### list_insert()
+Inserts an element between two already existing elements, given the position that the new element should occupy.
+
+### list_remove()
+Removes already existing element at given position from the list.
+
+### list_close()
+Deletes all the data in the list.
+
+### list_print()
+Prints list data in the terminal.
