@@ -4,24 +4,26 @@
 
 
 int main() {
-    list *head = NULL;
-    list *tmp;
-    int i;
+    list *head;
 
-    add(&head, 0);
-    add(&head, 1);
-    add(&head, 2);
+    list_add(&head, 0);
+    list_add(&head, 1);
+    list_add(&head, 2);
 
-    insert(&head, 5, 9);
+    list_insert(&head, 5, 9);
 
-    close(&head);
+    list_close(&head);
 
-    add(&head, 0);
-    //add(&head, 1);
+    list_insert(&head, 0, 23);
+    list_insert(&head, 0, 3);
+    list_insert(&head, 0, 7);
+    list_add(&head, 1);
 
-    insert(&head, 3, 10);
+    list_print(head);
 
-    printlist(head);
+    list_remove(&head, 5);
+
+    list_print(head);
 
     return 0;
 }

@@ -3,7 +3,7 @@
 #include "listlib.h"
 
 
-int add(
+int list_add(
     list **head,
     int data
     ) {
@@ -34,7 +34,7 @@ int add(
 }
 
 
-int pop(
+int list_pop(
     list **head
     ) {
     list *tail;
@@ -59,7 +59,7 @@ int pop(
 }
 
 
-int insert(
+int list_insert(
     list **head,
     int position,
     int data
@@ -147,7 +147,46 @@ int insert(
 }
 
 
-int close(
+int list_remove(
+    list **head,
+    int position
+    ) {
+    int i;
+    list *next;
+    list *current;
+    list *prev;
+
+    if (head == NULL || *head == NULL) {
+        return 1;
+    }
+
+    current = *head;
+    if (position >= 0) {
+        for (i = 0; i < position; i++) {
+            current = current->next;
+        }
+    } else {
+        for (i = 0; i > position; i--) {
+            current = current->prev;
+        }
+    }
+
+    next = current->next;
+    prev = current->prev;
+    next->prev = prev;
+    prev->next = next;
+
+    if (current == *head) {
+        *head = next;
+    }
+
+    free(current);
+
+    return 0;
+}
+
+
+int list_close(
     list **head
     ) {
     list *next;
@@ -172,7 +211,7 @@ int close(
 }
 
 
-int printlist(
+int list_print(
     list *head
     ) {
     list *node;
@@ -182,10 +221,12 @@ int printlist(
     }
 
     node = head;
+    printf("[");
     do {
-        printf("%d\n", node->data);
+        printf("%d", node->data);
         node = node->next;
-    } while (node != head);
+    } while (node != head && printf("; "));
+    printf("]\n");
 
     return 0;
 }

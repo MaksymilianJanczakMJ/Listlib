@@ -17,30 +17,36 @@ typedef struct list{
 } list;
 
 
-int add(
+int list_add(
     list **head,
     int data
     );
 
 
-int pop(
+int list_pop(
     list **head
     );
 
 
-int insert(
+int list_insert(
     list **head,
     int position,
     int data
     );
 
 
-int close(
+int list_remove(
+    list **head,
+    int position
+    );
+
+
+int list_close(
     list **head
     );
 
 
-int printlist(
+int list_print(
     list *head
     );
 
