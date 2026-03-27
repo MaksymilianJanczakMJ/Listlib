@@ -1,1 +1,1 @@
-# list_add()
+# list_add(list **head, int data)
