@@ -5,7 +5,7 @@ C90 library with cyclic bidirectional list functions. Based on theory presented 
 Functions in this repository are meant to help with data handling in C90. As options provided by default are very limited.
 
 ## Structure
-Lists consists of connected structures, where every structure aside of writen data also contains information about neighouring structures.
+Lists consists of connected nodes, where every node contains functional data and information about neighouring nodes.
 
 ### Visualization
 
