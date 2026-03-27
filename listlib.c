@@ -211,6 +211,17 @@ int list_close(
 }
 
 
+int list_pos(
+    list **head,
+    int position
+    ) {
+    int i;
+    list *current;
+
+    return 0;
+}
+
+
 int list_print(
     list *head
     ) {
