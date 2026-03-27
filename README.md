@@ -36,6 +36,9 @@ Removes already existing element at given position from the list.
 ### list_close()
 Deletes all the data in the list.
 
+### list_pos()
+Returns list data at given position.
+
 ### list_print()
 Prints list data in the terminal.
 
