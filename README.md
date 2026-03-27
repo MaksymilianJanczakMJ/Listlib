@@ -38,3 +38,6 @@ Deletes all the data in the list.
 
 ### list_print()
 Prints list data in the terminal.
+
+***
+&copy; Maksymilian Jańczak
