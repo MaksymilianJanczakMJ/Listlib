@@ -21,9 +21,9 @@ Lists consists of connected nodes, where every node contains functional data and
 
 ### Node
     typedef struct list{
-    int data;
-    struct list *prev;
-    struct list *next;
+        int data;
+        struct list *prev;
+        struct list *next;
     } list;
 
 ## Functions
