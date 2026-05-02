@@ -283,6 +283,30 @@ int list_change(
 }
 
 
+int list_len(
+    list **head,
+    int *size_out
+    ) {
+    int size;
+    list *current;
+
+    if (head == NULL || *head == NULL) {
+        *size_out = 0;
+        return 0;
+    }
+
+    current = *head;
+
+    for (size = 1; current->next != *head; size++) {
+        current = current->next;
+    }
+
+    *size_out = size;
+
+    return 0;
+}
+
+
 int list_print(
     list *head
     ) {
