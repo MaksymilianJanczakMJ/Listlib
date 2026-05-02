@@ -283,6 +283,30 @@ int list_change(
 }
 
 
+int list_copy(
+    list **head,
+    list **copy
+    ) {
+    int i;
+    int len;
+    char pos;
+
+    if (head == NULL || *head == NULL) {
+        return 1;
+    }
+
+    list_close(copy);
+    list_len(head, &len);
+
+    for (i = 0; i < len; i++) {
+        list_pos(head, i, &pos);
+        list_add(copy, pos);
+    }
+
+    return 0;
+}
+
+
 int list_len(
     list **head,
     int *size_out

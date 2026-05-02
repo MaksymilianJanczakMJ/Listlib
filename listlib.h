@@ -66,6 +66,12 @@ int list_change(
     );
 
 
+int list_copy(
+    list **head,
+    list **copy
+    );
+
+
 int list_len(
     list **head,
     int *size_out
