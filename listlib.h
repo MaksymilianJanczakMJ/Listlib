@@ -11,7 +11,7 @@ typedef union {
 */
 
 typedef struct list{
-    int data;
+    char data;
     struct list *prev;
     struct list *next;
 } list;
@@ -19,7 +19,7 @@ typedef struct list{
 
 int list_add(
     list **head,
-    int data
+    char data
     );
 
 
@@ -31,7 +31,7 @@ int list_pop(
 int list_insert(
     list **head,
     int position,
-    int data
+    char data
     );
 
 
@@ -49,14 +49,14 @@ int list_close(
 int list_pos(
     list **head,
     int position,
-    int *out
+    char *out
     );
 
 
 int list_change(
     list **head,
     int position,
-    int new_data
+    char new_data
     );
 
 

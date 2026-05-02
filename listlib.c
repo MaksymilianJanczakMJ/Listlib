@@ -5,7 +5,7 @@
 
 int list_add(
     list **head,
-    int data
+    char data
     ) {
     list *tail;
     list *new_node;
@@ -62,7 +62,7 @@ int list_pop(
 int list_insert(
     list **head,
     int position,
-    int data
+    char data
     ) {
     list *new_node;
     list *next;
@@ -214,7 +214,7 @@ int list_close(
 int list_pos(
     list **head,
     int position,
-    int *out
+    char *out
     ) {
     int i;
     list *current;
@@ -243,7 +243,7 @@ int list_pos(
 int list_change(
     list **head,
     int position,
-    int new_data
+    char new_data
     ) {
     int i;
     list *current;
@@ -282,7 +282,7 @@ int list_print(
     node = head;
     printf("[");
     do {
-        printf("%d", node->data);
+        printf("%c", node->data);
         node = node->next;
     } while (node != head && printf("; "));
     printf("]\n");
