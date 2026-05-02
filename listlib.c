@@ -240,6 +240,35 @@ int list_pos(
 }
 
 
+int list_change(
+    list **head,
+    int position,
+    int new_data
+    ) {
+    int i;
+    list *current;
+
+    if (head == NULL || *head == NULL) {
+        return 1;
+    }
+
+    current = *head;
+    if (position >= 0) {
+        for (i = 0; i < position; i++) {
+            current = current->next;
+        }
+    } else {
+        for (i = 0; i > position; i--) {
+            current = current->prev;
+        }
+    }
+
+    current->data = new_data;
+
+    return 0;
+}
+
+
 int list_print(
     list *head
     ) {

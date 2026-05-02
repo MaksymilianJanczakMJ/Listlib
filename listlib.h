@@ -53,6 +53,13 @@ int list_pos(
     );
 
 
+int list_change(
+    list **head,
+    int position,
+    int new_data
+    );
+
+
 int list_print(
     list *head
     );
