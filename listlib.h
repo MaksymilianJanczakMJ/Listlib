@@ -23,6 +23,12 @@ int list_add(
     );
 
 
+int list_adds(
+    list **head,
+    char *string
+    );
+
+
 int list_pop(
     list **head
     );

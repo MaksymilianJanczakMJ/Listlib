@@ -34,6 +34,20 @@ int list_add(
 }
 
 
+int list_adds(
+    list **head,
+    char *string
+    ) {
+    int i;
+
+    for (i = 0; string[i] != '\0' && string[i] != '\n'; i++) {
+        list_add(head, string[i]);
+    }
+
+    return 0;
+}
+
+
 int list_pop(
     list **head
     ) {
